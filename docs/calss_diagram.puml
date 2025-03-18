@@ -1,8 +1,8 @@
 @startuml
 class IpRotator{
-- proxy :tuple
-- headr: Dictionary
-- target: string
++ target_url: str
+- proxy :tuple[str,str,str]|None
+- headr: dict
 - get_proxy_retrys: int
 - get_proxy_timeout: int
 + proxies: list
