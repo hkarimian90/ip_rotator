@@ -1,0 +1,24 @@
+@startuml
+class IpRotator{
+- proxy :tuple
+- headr: Dictionary
+- target: string
+- sorces: list
+- get_proxy_retrys: int
+- get_proxy_timeout: int
++ proxies: list
+
+- show_get_status()
+- show_test_status()
+- get_from_hasdata()
+- get_from_freeproxy()
+- get_from_proxybros()
+- get_from_advanced()
+- get_from_iproyal()
+- get_from_hidemy_life()
++ get_proxies()
++ test_proxies()
+- clean_proxies()
++ pull_proxy()
+}
+@enduml

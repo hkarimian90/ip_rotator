@@ -1,0 +1,71 @@
+@startuml
+actor User
+participant IpRotator
+
+
+
+User -> IpRotator : get_proxies()
+activate IpRotator
+
+IpRotator -> IpRotator : show_get_status()
+activate IpRotator
+IpRotator --> User : Status Displayed
+deactivate IpRotator
+
+
+IpRotator -> IpRotator : get_from_hasdata()
+activate IpRotator
+IpRotator --> IpRotator : hasdata completed
+deactivate IpRotator
+
+IpRotator -> IpRotator : get_from_freeproxy()
+activate IpRotator
+IpRotator --> IpRotator : freeproxy completed
+deactivate IpRotator
+
+IpRotator -> IpRotator : get_from_proxybros()
+activate IpRotator
+IpRotator --> IpRotator : proxybros completed
+deactivate IpRotator
+
+IpRotator -> IpRotator : get_from_advanced()
+activate IpRotator
+IpRotator --> IpRotator : advanced completed
+deactivate IpRotator
+
+IpRotator -> IpRotator : get_from_iproyal()
+activate IpRotator
+IpRotator --> IpRotator : iproyal completed
+deactivate IpRotator
+
+IpRotator -> IpRotator : get_from_hidemy_life()
+activate IpRotator
+IpRotator --> IpRotator : hidemy_life completed
+deactivate IpRotator
+
+IpRotator --> User : Proxies Retrieved
+deactivate IpRotator
+
+User -> IpRotator : test_proxies()
+activate IpRotator
+
+IpRotator -> IpRotator: show_test_status()
+activate IpRotator
+IpRotator --> User : Status Displayed
+deactivate IpRotator
+
+
+IpRotator ->IpRotator:clean_proxies()
+activate IpRotator
+IpRotator --> IpRotator : bad proxies remove frome list
+deactivate IpRotator
+
+IpRotator --> User  : test_proxies compleated
+deactivate IpRotator
+
+
+User -> IpRotator : pull_proxy()
+activate IpRotator
+IpRotator --> User : retern a random tested proxy
+deactivate IpRotator
+@enduml
