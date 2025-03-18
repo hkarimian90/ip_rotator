@@ -3,7 +3,6 @@ class IpRotator{
 - proxy :tuple
 - headr: Dictionary
 - target: string
-- sorces: list
 - get_proxy_retrys: int
 - get_proxy_timeout: int
 + proxies: list
