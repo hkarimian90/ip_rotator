@@ -9,3 +9,4 @@ venv/
 data/output/*
 data/input/*
 .env
+ip_rotator.log
